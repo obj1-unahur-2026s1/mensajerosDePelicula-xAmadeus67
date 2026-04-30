@@ -1,5 +1,5 @@
-transportes.*
-destinos.*
+import transportes.*
+import destinos.*
 
 object roberto {
   var transporte = bici
