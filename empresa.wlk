@@ -1,7 +1,7 @@
-mensajeros.*
-destinos.*
-transportes.*
-paquete.*
+import mensajeros.*
+import destinos.*
+import transportes.*
+import paquetes.*
 
 Object empresa {
    const mensajeros = []
