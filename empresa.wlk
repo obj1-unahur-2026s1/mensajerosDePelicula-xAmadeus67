@@ -3,18 +3,18 @@ import destinos.*
 import transportes.*
 import paquetes.*
 
-Object empresa {
+object empresa {
    const mensajeros = []
    
    method mensajeros() = mensajeros //escribirlo asi es igual al otro metodo con llaves
    method contratarUnMensajero(unMensajero) {
-      Mensajeros.add(unMensajero)
+      mensajeros.add(unMensajero)
    }
    method despedirUnMensajero(unMensajero) {
-      Mensajeros.remove(unMensajero)
+      mensajeros.remove(unMensajero)
    }
    method despedirATodos() {
-      Mensajeros.clear()
+      mensajeros.clear()
    }
    method agregarListaDeMensajeros(unaLista) {
       mensajeros.adAll(unaLista)
@@ -22,8 +22,8 @@ Object empresa {
    method eliminarListaDeMensajeros(unaLista) {
       mensajeros.removeAll(unaLista)
    } 
-   method esGrande(mensajeros) {
-      return mensajeros.size() > 2
+   method esGrande(unaLista) {
+      return unaLista.size() > 2
    }
    method puedeSerEntregadoPorPrimerMensajero(unPaquete) {
       return unPaquete.puedeSerEntregado(self.primerEmpleado())

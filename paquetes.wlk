@@ -2,7 +2,7 @@ import destinos.*
 import mensajeros.*
 import transportes.*
 
-Object paquete {
+object paquete {
    var estaPago = false
    var destino = brooklyn 
 
@@ -10,15 +10,15 @@ Object paquete {
       return estaPago
    }
    method registrarPago() {
-      return estaPago = true 
+      estaPago = true 
    }
    method cancelarPago() {
-      return estaPago = false 
+      estaPago = false 
    }
    method cambiarDestino(nuevoDestino) {
-      return destino = nuevoDestino
+      destino = nuevoDestino
    }
    method puedeEntregarse(unMensajero) {
-      return destino.dejaPasar(unMensajero) &&  estaPago  
+      return destino.dejaPasar(unMensajero) && estaPago  
    }
 }

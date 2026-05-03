@@ -2,6 +2,7 @@ import paquetes.*
 import destinos.*
 import transportes.*
 import mensajeros.*
+import empresa.*
 
 describe "pruebas de roberto"
      
@@ -27,3 +28,13 @@ paquete.cambiarDestino(laMatrix)
 
 assert.equals(true, puedeEntregarse(neo))
 
+
+describe "pruebas mensajeria recargada"
+
+    test "Averiguar si un paquete puede ser entregado por la empresa de mensajería, es decir, si al menos uno de sus mensajeros puede entregar el paquete."
+
+empresa.contratarUnMensajero(johann)
+paquete.registrarPago()
+
+
+assert.equals(true,paquete.puedeEntregarse(johann))

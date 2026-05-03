@@ -1,4 +1,4 @@
-mensajeros.*
+import mensajeros.*
 
 object brooklyn {
   method dejaPasar(unMensajero) {
@@ -7,7 +7,7 @@ object brooklyn {
 }
 
 
-Object laMatrix {
+object laMatrix {
    method dejaPasar(unMensajero) {
       return unMensajero.puedeLlamar() 
    }

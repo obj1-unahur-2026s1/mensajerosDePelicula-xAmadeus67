@@ -12,7 +12,7 @@ object roberto {
      return peso + transporte.peso() 
   }
   method cambiarTransporte(unTransporte) {
-     return transporte = unTransporte
+     transporte = unTransporte
   }
 }
 
@@ -32,15 +32,39 @@ object neo {
      return saldo
   }
   method cargarSaldo() {
-     return saldo = true
+      saldo = true
   }
   method consumirSaldo() {
-     return saldo = false 
+      saldo = false 
   }
   method puedeLlamar() {
      return saldo
   }
   method pesoTotal() {
      return 0 
+  }
+}
+
+object johann {
+   var saldo = true
+   var transporte = bici
+   var property peso = 90
+
+   method tieneSaldo() = saldo
+
+   method cargarSaldo() {
+      saldo = true
+   }
+   method consumirSaldo() {
+      saldo = false 
+   }
+   
+   method puedeLlamar() = saldo
+
+   method pesoTotal() {
+     return peso + transporte.peso() 
+  }
+   method cambiarTransporte(unTransporte) {
+     transporte = unTransporte
   }
 }
